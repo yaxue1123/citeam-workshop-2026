@@ -4,6 +4,7 @@ const isProd = process.env.GITHUB_ACTIONS === "true";
 
 const nextConfig: NextConfig = {
   output: "export",
+  images: { unoptimized: true },
   ...(isProd && {
     basePath: "/citeam-workshop-2026",
     assetPrefix: "/citeam-workshop-2026/",
