@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
 
 const agenda = [
@@ -24,10 +25,16 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900 font-sans">
       {/* Hero banner */}
-      <div className="w-full h-56 bg-gray-100 flex items-center justify-center">
-        <span className="text-gray-400 text-xs tracking-[0.3em] uppercase">
-          CITEAM · University of Maryland
-        </span>
+      <div className="relative w-full h-64 overflow-hidden bg-white">
+        <Image
+          src="/hero.png"
+          alt="JEOL TEM instrument"
+          fill
+          className="object-cover object-right"
+          priority
+        />
+        {/* Left-to-right fade overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent" />
       </div>
 
       <div className="max-w-3xl mx-auto px-6 py-10 space-y-12">
@@ -88,7 +95,9 @@ export default function Home() {
             registration fees are non-refundable.
           </p>
           <a
-            href="#"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfSoUTdiSjyiqth-y_PGRjp_xdyfJlvZz0_m55PARp4koZK7w/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block text-white text-sm font-semibold px-4 py-2 rounded transition-colors" style={{ backgroundColor: "#EF9F27" }}
           >
             RSVP
@@ -101,8 +110,9 @@ export default function Home() {
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-200 pb-2">Location</h2>
           <div className="text-gray-700 text-sm">
             <p className="font-semibold text-gray-900">University of Maryland</p>
-            <p>4462 Stadium Dr</p>
-            <p>College Park, MD 20740</p>
+            <p className="text-gray-500">Jeong H. Kim Engineering Building</p>
+            <p>8228 Paint Branch Dr</p>
+            <p>College Park, MD 20742</p>
           </div>
         </section>
 
