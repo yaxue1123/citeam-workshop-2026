@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+  basePath: '/citeam-workshop-2026',
+  assetPrefix: '/citeam-workshop-2026/'
 };
 
 export default nextConfig;
