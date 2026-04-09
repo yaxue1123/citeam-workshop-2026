@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
 
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const agenda = [
   { time: "08:30 AM – 08:45 AM", title: "Arrival + environment check" },
   { time: "08:45 AM – 09:45 AM", title: "Why we are here: open science, data management, and workshop goals" },
@@ -27,7 +29,7 @@ export default function Home() {
       {/* Hero banner */}
       <div className="relative w-full h-64 overflow-hidden bg-white">
         <Image
-          src="/hero.png"
+          src={`${base}/hero.png`}
           alt="JEOL TEM instrument"
           fill
           className="object-cover object-right"
@@ -147,7 +149,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="mt-16 border-t border-gray-200 py-6 px-6">
         <div className="max-w-3xl mx-auto flex items-center gap-3 text-sm text-gray-500">
-          <Image src="/nsf-logo.png" alt="NSF logo" width={36} height={36} className="flex-shrink-0" />
+          <Image src={`${base}/nsf-logo.png`} alt="NSF logo" width={36} height={36} className="flex-shrink-0" />
           <p>
             CITEAM is supported by the NSF under award number{" "}
             <a
