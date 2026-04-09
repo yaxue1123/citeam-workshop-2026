@@ -58,7 +58,7 @@ export default function Home() {
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-200 pb-2">Overview</h2>
           <div className="space-y-4 text-gray-700 leading-relaxed text-sm">
             <p>
-              The CITEAM workshop is geared toward cyberinfrastructure (CI) training for the
+              The <a href="https://citeamcourse.org/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-700">CITEAM</a> workshop is geared toward cyberinfrastructure (CI) training for the
               community of scientists and researchers using the new generation of Transmission
               Electron Microscope (TEM) instruments at UMD. The training materials presented during
               the workshop and the associated training activities will help reduce barriers to the
@@ -67,8 +67,9 @@ export default function Home() {
               and publishing data — encompassing end-to-end TEM Data Management.
             </p>
             <p>
-              This edition of the workshop will include a keynote talk from Professor Ichiro
-              Takeuchi, and cover foundational materials relevant to the instrument users.
+              This edition of the workshop will include a keynote talk from{" "}
+              <a href="https://mse.umd.edu/clark/faculty/722/Ichiro-Takeuchi" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-700">Professor Ichiro Takeuchi</a>
+              , and cover foundational materials relevant to the instrument users.
             </p>
             <p>
               This day-long workshop will be structured around a mix of lectures introducing the
@@ -110,7 +111,7 @@ export default function Home() {
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-200 pb-2">Location</h2>
           <div className="text-gray-700 text-sm">
             <p className="font-semibold text-gray-900">University of Maryland</p>
-            <p className="text-gray-500">Jeong H. Kim Engineering Building</p>
+            <p className="text-gray-500">Jeong H. Kim Engineering Building, Room 2107</p>
             <p>8228 Paint Branch Dr</p>
             <p>College Park, MD 20742</p>
           </div>
@@ -142,6 +143,25 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      {/* Footer */}
+      <footer className="mt-16 border-t border-gray-200 py-6 px-6">
+        <div className="max-w-3xl mx-auto flex items-center gap-3 text-sm text-gray-500">
+          <Image src="/nsf-logo.png" alt="NSF logo" width={36} height={36} className="flex-shrink-0" />
+          <p>
+            CITEAM is supported by the NSF under award number{" "}
+            <a
+              href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2519465"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-gray-700"
+            >
+              2519465
+            </a>
+            .
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
