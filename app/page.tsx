@@ -26,6 +26,15 @@ const breaks = new Set(["Break", "Lunch"]);
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900 font-sans">
+      {/* University logos */}
+      <div className="w-full border-b border-gray-100 px-6 py-4">
+        <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-start gap-6 sm:gap-10">
+          <Image src={`${base}/logo-umd.png`} alt="University of Maryland" width={180} height={72} className="object-contain h-10 sm:h-16 w-auto" />
+          <Image src={`${base}/logo-unc.png`} alt="UNC Chapel Hill" width={180} height={72} className="object-contain h-10 sm:h-16 w-auto" />
+          <Image src={`${base}/logo-usc.png`} alt="University of Southern California" width={180} height={72} className="object-contain h-10 sm:h-16 w-auto" />
+        </div>
+      </div>
+
       {/* Hero banner */}
       <div className="relative w-full h-64 overflow-hidden bg-white">
         <Image
