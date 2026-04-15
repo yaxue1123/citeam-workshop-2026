@@ -166,15 +166,12 @@ export default function Home() {
         <div className="max-w-3xl mx-auto flex items-center gap-3 text-sm text-gray-500">
           <Image src={`${base}/nsf-logo.png`} alt="NSF logo" width={36} height={36} className="flex-shrink-0" />
           <p>
-            CITEAM is supported by the NSF under award number{" "}
-            <a
-              href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2519465"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-gray-700"
-            >
-              2519465
-            </a>
+            CITEAM is supported by the NSF under award numbers{" "}
+            <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2519465" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-700">2519465</a>
+            {", "}
+            <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2519466" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-700">2519466</a>
+            {", and "}
+            <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2519467" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-700">2519467</a>
             .
           </p>
         </div>
